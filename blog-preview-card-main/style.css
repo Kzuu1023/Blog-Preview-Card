@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --main-bg-color: hsl(47, 88%, 63%);
+    --card-main-bg-color: hsl(0, 0%, 100%);
+
+    --card-span-bg-color: hsl(47, 88%, 63%);
+    --card-color-description: hsl(0, 0%, 42%);
+
+    --author-name-color: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: "Figtree", sans-serif;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 1.4rem;
+    align-items: center;
+    max-width: 24rem;
+    max-height: 32.625rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-main-bg-color);
+    border-radius: 1.25rem;
+    gap: 1rem;
+    box-shadow: 10px 8px 0px 0000;
+}
+
+.card .card__image-container svg {
+    border-radius: 0.625rem;
+}
+
+.card .card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card .card__description .published {
+    color: hsl(0, 0%, 7%);
+}
+
+.card .card__description span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.125rem;
+    height: 1.875rem;
+    background-color: var(--card-span-bg-color);
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.card .card__description p {
+    color: var(--card-color-description);
+    line-height: 1.4rem;
+}
+
+.author__container {
+    display: flex;
+    align-self: flex-start;
+}
+
+.author__container .author__img-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
+}
+
+.author__img-container img {
+    max-width: 2rem;
+}
+.author__container p {
+    color: var(--author-name-color);
+    font-weight: 700;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 42%;
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 1.4rem;
+        align-items: center;
+        width: 20.4375rem; /* 327px in rem */
+        max-height: 32.625rem; /* 522px */
+    }
+}
